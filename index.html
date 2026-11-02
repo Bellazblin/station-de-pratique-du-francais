@@ -415,14 +415,6 @@ select.vis{border:none;background:transparent;color:var(--ink2);font:inherit;fon
 .anno-line[contenteditable="true"]{outline:2px dashed var(--amber);outline-offset:2px;background:#1d2f4d;cursor:text}
 .anno-ctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:7px}
 .anno-hint{font-size:11.5px;color:var(--muted)}
-/* system edit toggle (left navigation) */
-.sys-edit{margin-top:10px;padding:11px 14px}
-.sys-edit-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.sys-edit-top b{font-size:14px}
-.sys-switch{flex:none;width:46px;height:26px;border-radius:999px;border:1.5px solid var(--line2);background:var(--card);position:relative;padding:0;cursor:pointer}
-.sys-switch span{position:absolute;top:2px;left:2px;width:19px;height:19px;border-radius:50%;background:var(--muted);transition:left .18s,background .18s}
-.sys-switch[aria-checked="true"]{background:var(--amber);border-color:var(--amber)}
-.sys-switch[aria-checked="true"] span{left:22px;background:#fff}
 /* ---------- daily materials (simplified main flow) ---------- */
 .mat-intro{font-size:13.5px;color:var(--ink2);background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin:0 0 14px;line-height:1.6}
 .mat-poster{background:#fff;color:#16233c;border:1.5px solid var(--line2);border-radius:16px;padding:20px 20px 16px;margin:2px 0 10px;box-shadow:0 8px 22px -14px rgba(23,38,66,.35)}
@@ -500,7 +492,6 @@ select.vis{border:none;background:transparent;color:var(--ink2);font:inherit;fon
 .chunk-text .tie.no{color:var(--red);border-bottom-color:color-mix(in srgb,var(--red) 60%,transparent)}
 .chunk-text .tie:hover::after,.chunk-text .tie:focus::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);z-index:60;width:max-content;max-width:250px;white-space:normal;background:var(--ink);color:var(--bg);font-family:"Public Sans",sans-serif;font-size:12px;font-weight:600;line-height:1.5;border-radius:9px;padding:7px 10px;box-shadow:var(--shadow);pointer-events:none}
 .lia-ctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
-.lia-textarea{width:100%;border:1.5px solid var(--amber);border-radius:9px;background:var(--card2);color:var(--ink);font-family:"Lora",Georgia,serif;font-size:15.5px;line-height:1.6;padding:8px 11px;margin-top:8px}
 .sys-edited-tag{font-size:11px;font-weight:800;color:var(--amber);background:var(--amber-bg);border:1px solid color-mix(in srgb,var(--amber) 45%,var(--line));border-radius:999px;padding:2px 9px}
 .poster-img{display:block;width:min(300px,100%);height:auto;border-radius:12px;border:1px solid var(--line);margin:2px 0 10px}
 .poster-start{width:min(480px,100%);margin:4px 0 12px}
@@ -543,15 +534,6 @@ body{background:var(--bg)}
 .lia-toggle.on{background:var(--navy);border-color:var(--navy);color:#fff}
 .seg-sub{font-size:13.5px;color:var(--ink2);margin:0 0 10px}
 .chunk-h{margin:0 0 4px;font-size:15px}
-.vocab-admin{margin-top:12px;border:1px dashed var(--line2);border-radius:10px;padding:10px 12px;background:var(--card2)}
-.vocab-admin h5{margin:0 0 6px;font-size:13px}
-.vocab-admin .va-note{font-size:12px;color:var(--muted);margin:0 0 8px;line-height:1.55}
-.va-row{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;padding:5px 0;border-top:1px solid var(--line);font-size:13.5px}
-.va-row:first-of-type{border-top:none}
-.va-row .va-fr{font-family:"Lora",Georgia,serif;font-weight:600}
-.va-row .va-surface{color:var(--muted);font-size:12px}
-.va-form{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
-.va-form input{flex:1 1 150px;border:1.5px solid var(--line2);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;font-size:13.5px;padding:7px 10px;min-width:0}
 /* ---------- accueil: profile, feed title, collapsible v2 downloads, compact segments ---------- */
 .profile-intro{margin:2px 2px 16px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;line-height:1.6;color:var(--ink2)}
 .profile-intro p{margin:0 0 7px}
@@ -564,7 +546,6 @@ body{background:var(--bg)}
 .dl-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
 .dl-collapse .icon-row{margin:2px 0 8px}
 .dl-collapse .icon-row[hidden]{display:none}
-.fn-note-area{flex:1 1 100%;width:100%;border:1.5px solid var(--line2);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;font-size:13.5px;line-height:1.55;padding:7px 10px;margin-top:5px;resize:vertical}
 .grp-grid{grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.grp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1180px){.grp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -592,13 +573,6 @@ body{background:var(--bg)}
 .wchips .tie{color:var(--blue);font-weight:700;cursor:help;position:relative;padding:0 1px;border-bottom:1.5px dotted color-mix(in srgb,var(--blue) 60%,transparent)}
 .wchips .tie.no{color:var(--red);border-bottom-color:color-mix(in srgb,var(--red) 60%,transparent)}
 .wchips .tie:hover::after,.wchips .tie:focus::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);z-index:90;width:max-content;max-width:250px;white-space:normal;background:var(--ink);color:var(--bg);font-family:"Public Sans",sans-serif;font-size:12px;font-weight:600;line-height:1.5;border-radius:9px;padding:7px 10px;box-shadow:var(--shadow);pointer-events:none;text-align:left}
-/* ---------- 标签编辑（系统编辑模式） ---------- */
-.tag-admin{margin:8px 0 12px;border:1px dashed var(--line2);border-radius:10px;padding:10px 12px;background:var(--card2)}
-.tag-admin h5{margin:0 0 4px;font-size:13px}
-.tag-admin .ta-note{font-size:12px;color:var(--muted);margin:0 0 8px;line-height:1.55}
-.tag-edit-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:4px 0}
-.tag-edit-input{flex:1 1 140px;border:1.5px solid var(--line2);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;font-size:13.5px;padding:7px 10px;min-width:0}
-.tag-add-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
 .trans-after-poster{border:1px solid var(--line);border-radius:12px;background:var(--card2);padding:13px 15px;margin:0 0 14px}
 .trans-after-poster h4{margin:0 0 8px;font-size:14px;color:var(--ink)}
 .trans-after-poster p{margin:0;font-size:15px;line-height:1.8;color:var(--ink2)}
@@ -623,23 +597,6 @@ body{background:var(--bg)}
 .audio-dl-row{display:flex;align-items:center;gap:10px}
 .audio-dl-row audio{flex:1;min-width:0}
 .audio-dl{width:38px;height:38px;border-radius:10px;flex:none}
-/* ---------- 管理页面 · Page de gestion ---------- */
-.admin-view{max-width:860px;margin:0 auto}
-.admin-view h2{font-family:"Lora",Georgia,serif;font-size:26px;margin:0 0 8px}
-.admin-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:0 0 18px;box-shadow:var(--shadow)}
-.admin-card h3{margin:0 0 8px;font-size:18px}
-.admin-note{font-size:13.5px;color:var(--ink2);background:var(--amber-bg);border:1px solid color-mix(in srgb,var(--amber) 35%,var(--line));border-radius:10px;padding:12px 14px;line-height:1.65;margin:0 0 16px}
-.admin-note b{color:var(--ink)}
-.admin-field{margin:0 0 12px}
-.admin-field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
-.admin-field input[type=text],.admin-field input[type=password],.admin-field textarea{width:100%;border:1.5px solid var(--line2);border-radius:10px;background:var(--card2);color:var(--ink);font:inherit;font-size:15px;padding:9px 12px}
-.admin-field textarea{resize:vertical;line-height:1.55}
-.admin-post{border-top:1px solid var(--line);padding-top:16px;margin-top:16px}
-.admin-post:first-of-type{border-top:none;padding-top:4px;margin-top:4px}
-.admin-post h4{margin:0 0 10px;font-size:16px}
-.admin-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.admin-msg{font-size:13.5px;color:var(--teal);font-weight:700;margin:10px 0 0}
-.admin-msg:empty{display:none}
 /* ---------- 语块区标题 + 全局开关 + 对齐高亮 + 管理对齐表 ---------- */
 .seg-box{border:1px solid var(--line2);border-radius:14px;background:var(--card2);padding:14px;margin-top:4px}
 .seg-box .grp-grid{margin-top:0}
@@ -654,14 +611,6 @@ body{background:var(--bg)}
 .lia-switch:disabled{opacity:.45;cursor:not-allowed}
 .seg-align-note{font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.55}
 
-.align-box .align-note{font-size:13.5px;color:var(--ink2);line-height:1.65;margin:0 0 10px}
-.align-seg{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px;background:var(--card2)}
-.align-seg-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-.align-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:5px 0;border-top:1px solid var(--line);font-size:13.5px}
-.align-row .align-w{font-family:"Lora",Georgia,serif;font-weight:600;flex:1 1 130px}
-.align-row label{font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:4px}
-.align-in{width:84px;border:1.5px solid var(--line2);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:13px;padding:5px 7px}
-.align-flag{font-size:11px;font-weight:800;color:var(--red);background:var(--red-bg);border:1px solid color-mix(in srgb,var(--red) 40%,var(--line));border-radius:999px;padding:2px 9px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -700,7 +649,6 @@ body{background:var(--bg)}
 
   </main>
 </div>
-
 
 
 </div>
@@ -838,8 +786,7 @@ var BUILTIN_ZH="这些新生力量，就是赢得选举的学生运动。这场�
    contre, les législatives for élections législatives, ont …
    conscience que for avoir conscience que). Markers are numbered in
    order of appearance. Meanings are never invented for words
-   outside this list or the admin's own additions (see the vocab
-   admin below). */
+   outside this list. */
 var VOCAB20=[
   {s:9,e:9,fr:"vainqueur",zh:"获胜的；获胜者",note:"vainqueur（adjectif / nom m.）— 获胜的；获胜者。作形容词时放在名词后，表示在比赛或选举中获胜；作名词时指获胜者。注意阴性形式是 vainqueure，但口语和新闻中常直接用 vainqueur。例：Le candidat vainqueur a remercié ses électeurs.（获胜的候选人感谢了他的选民。）"},
   {s:15,e:19,fr:"manifester contre",zh:"抗议，反对",note:"manifester contre（verbe）— 抗议，反对。manifester 后面接 contre 再加抗议的对象，表示公开表达不满。也可以说 manifester pour 表示支持某事，不要把 pour 和 contre 弄混。例：Les étudiants manifestent contre la hausse des frais.（学生们抗议学费上涨。）"},
@@ -897,10 +844,10 @@ var BND_BTN=[["lob","‿ 必连"],["lopt","(‿) 可连"],["lforbid","✕ 禁连
    kept in this browser only and are shown to participants read-only with a
    «已由系统编辑» mark. Participant liaison/melody edits never overwrite a
    system override — only "恢复自动" (Reset) in system mode clears it. */
-var ANNO_KEY="fayuAnnoSysV1";
-var SYS=(function(){try{var s=JSON.parse(localStorage.getItem(ANNO_KEY));if(s&&typeof s==="object")return {on:!!s.on,edits:(s.edits&&typeof s.edits==="object")?s.edits:{}};}catch(e){}return {on:false,edits:{}};})();
-SYS.on=false; /* 公开访客永远不是编辑状态：只有管理页面登录后才临时打开 */
-function saveSys(){try{localStorage.setItem(ANNO_KEY,JSON.stringify(SYS));}catch(e){}}
+/* 本站为纯公开页面：没有管理页面，也没有任何系统编辑状态。
+   SYS 固定关闭、没有任何覆盖内容，页面始终显示内置的公开内容。 */
+var SYS={on:false,edits:{}};
+function saveSys(){}
 function sanitizeAnno(html){
   var d=document.createElement("div");d.innerHTML=html||"";
   d.querySelectorAll("script,style,iframe,object,embed,link,meta,title").forEach(function(n){n.remove();});
@@ -1006,26 +953,6 @@ function findPhraseRange(post,phrase){
   }
   return null;
 }
-var fnEditIdx=-1;
-function vocabAdminHTML(post){
-  /* Free-form note editing: each marker's meaning is a plain text
-     note in a textarea. There is no enforced format, no required
-     field and no template — whatever text is saved is exactly what
-     participants see when they hover / tap the marker. */
-  var list=vocabNumbered(post);
-  var h='<div class="vocab-admin"><h5>生词意思笔记 · Notes de sens（系统编辑）</h5>';
-  h+='<p class="va-note">像写笔记一样自由编辑每个标记的意思：想怎么写就怎么写，没有固定格式、没有必填项、没有模板。改完点「保存笔记」，参与者悬停（或点一下）标记时，看到的就是你写的这段话。保存后带有「已由系统编辑」标记。</p>';
-  list.forEach(function(v,i){
-    var note=v.note?v.note:(v.fr+" — "+v.zh);
-    h+='<div class="va-row"><span><b>'+v.num+'.</b> <span class="va-fr">'+escH(v.fr)+'</span> <span class="va-surface">（原文：'+escH(post.words.slice(v.s,v.e+1).join(" "))+')</span></span>'
-      +'<span class="mini-btns"><button type="button" class="mini" data-act="fndel" data-p="'+post.id+'" data-idx="'+i+'">删除</button></span>'
-      +'<textarea class="fn-note-area" data-fnnote="'+post.id+'" data-s="'+v.s+'" data-e="'+v.e+'" rows="2" aria-label="自由笔记：'+escA(v.fr)+' 的意思">'+escH(note)+"</textarea></div>";
-  });
-  h+='<div class="va-form"><button type="button" class="mini" data-act="fnnotesave" data-p="'+post.id+'">保存笔记 Enregistrer les notes</button></div>';
-  h+='<div class="va-form"><input type="text" id="fn-surface-'+post.id+'" placeholder="要加标记的原文词或短语（按原文里出现的样子写）" aria-label="原文短语"><input type="text" id="fn-note-new-'+post.id+'" placeholder="意思笔记（自由写，格式随便）" aria-label="意思笔记"><button type="button" class="mini" data-act="fnaddnote" data-p="'+post.id+'">添加标记 Ajouter</button></div>';
-  h+="</div>";
-  return h;
-}
 /* ---------------- liaison applied directly on the chunk text ----------------
    The chunk's own French text carries the liaison ties automatically
    (from g.bnds / g.cands). Hovering (or tapping) a tie explains which kind
@@ -1111,11 +1038,6 @@ function liaPlainText(post,gi){
   var parsed=post.parsed||[];
   var lastP=parsed[g.w1]?parsed[g.w1].punct:"";
   return out+frPunct(lastP);
-}
-function liaEditorHTML(post,gi){
-  var h='<textarea class="lia-textarea" id="liata-'+post.id+"-"+gi+'" rows="2" aria-label="系统编辑：直接修改这一语块文字上的联读标记">'+escH(liaPlainText(post,gi))+"</textarea>";
-  h+='<div class="lia-ctl"><button type="button" class="mini" data-lia-act="save" data-p="'+post.id+'" data-g="'+gi+'">保存联读 Enregistrer</button><button type="button" class="mini" data-lia-act="reset" data-p="'+post.id+'" data-g="'+gi+'">恢复自动 Réinitialiser</button><span class="anno-hint">直接在文本里改联读标记：‿ 必连读 · (‿) 可连读 · ✕ 禁连读。保存后参与者看到修改版，并带有「已由系统编辑」标记。</span></div>';
-  return h;
 }
 function annoAutoForFeed(post,gi){
   var g=post.groups[gi];if(!g)return "";
@@ -1304,7 +1226,6 @@ function postGroupHTML(post,g,gi){
   } else {
     h+='<p class="am-line">本语块暂无录音。</p>';
   }
-  if(SYS.on)h+=liaEditorHTML(post,gi);
   h+="</div>";
   return h;
 }
@@ -1337,7 +1258,7 @@ function posterHTML(post){
    the day's saved vocabulary / phrase list (VOCAB20, from jour37
    transcript.txt and nuggets.json): French term, Chinese meaning, and
    the usage note with its example where one was saved. No items are
-   added beyond that saved list (admin edits via SYS are honoured). */
+   added beyond that saved list. */
 function vocabSectionHTML(post){
   if(!post.vocab)return "";
   var list=vocabNumbered(post);
@@ -1407,9 +1328,7 @@ function texteSectionHTML(post){
   h+='<div class="lia-row texte-lia"><span class="lia-lab">联读标注 · Liaison</span><button type="button" class="lia-switch" data-scope="texte" disabled aria-disabled="true" role="switch" aria-checked="false" title="联读标注 · Liaison" aria-label="联读标注 · Liaison"><span></span></button><span class="coming-badge">即将推出 · Bientôt disponible</span></div>';
   h+='<div class="lia-row texte-lia"><span class="lia-lab">语调 · Intonation</span><button type="button" class="lia-switch" data-scope="texte" disabled aria-disabled="true" role="switch" aria-checked="false" title="语调 · Intonation" aria-label="语调 · Intonation"><span></span></button><span class="coming-badge">即将推出 · Bientôt disponible</span></div>';
   if(post.vocab)h+='<div class="lia-row texte-lia"><span class="lia-lab">词义标记 · Vocabulaire</span><button type="button" class="lia-switch" data-act="textefn" data-scope="texte" data-p="'+post.id+'" role="switch" aria-checked="'+(fnOn?"true":"false")+'" title="词义标记 · Vocabulaire" aria-label="词义标记 · Vocabulaire"><span></span></button></div>';
-  if(SYS.edits["text:"+post.id])h+='<p class="wchips">'+escH(effText(post))+'</p><p class="mat-hint">原文已由管理员修改 · Texte modifié par la gestion</p>';
-  else h+='<p class="wchips">'+texteWordsHTML(post)+"</p>";
-  if(SYS.on&&post.vocab)h+=vocabAdminHTML(post);
+  h+='<p class="wchips">'+texteWordsHTML(post)+"</p>";
   h+="</div>";
   return h;
 }
@@ -1428,10 +1347,8 @@ function segHeaderHTML(post){
   h+="</div>";
   return h;
 }
-/* ---------------- 每条动态的标签：管理员自由编辑 ----------------
-   标签就是类型和管理员想加的信息，自由文字，没有固定清单。
-   系统编辑模式下可改、可删、可加；保存后存于本浏览器
-   （SYS.edits，键 "tags:<post id>"），参与者只读看到保存版。 */
+/* ---------------- 每条动态的标签 ----------------
+   每条动态的内置标签（类型和简短信息），只读显示。 */
 function postTags(post){
   var raw=SYS.edits["tags:"+post.id];
   if(raw){
@@ -1439,20 +1356,7 @@ function postTags(post){
   }
   return (post.tags||[]).slice();
 }
-function tagAdminHTML(post){
-  if(!SYS.on)return "";
-  var tags=postTags(post);
-  var h='<div class="tag-admin"><h5>标签编辑 · Modifier les étiquettes（系统编辑）</h5>';
-  h+='<p class="ta-note">标签是这条动态的类型和你想加的信息，自由填写：可以写类型、日子或任何简短信息，没有固定清单。改完点「保存标签」，参与者只读看到保存后的标签。</p>';
-  tags.forEach(function(t,i){
-    h+='<div class="tag-edit-row"><input type="text" class="tag-edit-input" data-tagp="'+post.id+'" value="'+escA(t)+'" aria-label="标签 '+(i+1)+'"><button type="button" class="mini" data-act="tagdel" data-p="'+post.id+'" data-idx="'+i+'">删除 · Supprimer</button></div>';
-  });
-  h+='<div class="tag-edit-row"><button type="button" class="mini" data-act="tagsave" data-p="'+post.id+'">保存标签 · Enregistrer les étiquettes</button></div>';
-  h+='<div class="tag-add-row"><input type="text" class="tag-edit-input" id="tag-new-'+post.id+'" placeholder="新标签（自由填写）· Nouvelle étiquette" aria-label="新标签"><button type="button" class="mini" data-act="tagadd" data-p="'+post.id+'">添加标签 · Ajouter</button></div>';
-  h+="</div>";
-  return h;
-}
-/* 管理页面保存的标题 / 日期 / 原文覆盖（存在 SYS.edits 中） */
+/* 每条动态显示用的标题 / 日期 / 原文（内置公开内容） */
 function effTitle(post){var v=SYS.edits["title:"+post.id];return (v&&String(v).trim())?String(v):(post.title||"");}
 function effPosted(post){var v=SYS.edits["posted:"+post.id];return v!==undefined?String(v):(post.postedLabel||"");}
 function effText(post){var v=SYS.edits["text:"+post.id];return (v&&String(v).trim())?String(v):(post.text||"");}
@@ -1463,7 +1367,6 @@ function postHTML(post,idx){
      and time posted, nothing else. Then the poster (or text). */
   var fhTags=postTags(post).map(function(t){return '<span class="tag-box">'+escH(t)+"</span>";}).join("");
   h+='<div class="fh"><h3 class="post-title"><span class="fh-t">'+escH(effTitle(post))+"</span>"+(fhTags?'<span class="fh-tags">'+fhTags+"</span>":"")+"</h3>"+(effPosted(post)?'<div class="when">'+escH(effPosted(post))+"</div>":"")+"</div>";
-  h+=tagAdminHTML(post);
   /* 1 · poster first, then the collapsible 生词和短语 section
      (collapsed by default), then the collapsible 文本与翻译 section
      (French text first, then Chinese translation, collapsed by default) */
@@ -1819,75 +1722,6 @@ $("feedPosts").addEventListener("click",function(ev){
   else if(act==="textefn"){TEXTE_FN_ON=!TEXTE_FN_ON;var txBox=$("texte-"+post.id);if(txBox){txBox.innerHTML=texteSectionHTML(post);}else{renderFeed();}}
   else if(act==="segfn"){SEG_FN_ON=!SEG_FN_ON;el.setAttribute("aria-checked",SEG_FN_ON?"true":"false");refreshPostGroups(post);}
   else if(act==="globalfn"){/* 旧的共享开关已拆分，不再使用 */}
-  else if(act==="tagsave"||act==="tagdel"||act==="tagadd"){
-    var curTags=[];
-    document.querySelectorAll('.tag-edit-input[data-tagp="'+post.id+'"]').forEach(function(inp){var vv=inp.value.trim();if(vv)curTags.push(vv);});
-    if(act==="tagdel"){var di2=+el.dataset.idx;if(di2>=0&&di2<curTags.length)curTags.splice(di2,1);}
-    if(act==="tagadd"){
-      var nIn2=$("tag-new-"+post.id);var nv=nIn2?nIn2.value.trim():"";
-      if(!nv){toast("先写下新标签的内容。");return;}
-      curTags.push(nv);
-    }
-    SYS.edits["tags:"+post.id]=JSON.stringify(curTags);saveSys();renderFeed();
-    toast(act==="tagdel"?"标签已删除。":act==="tagadd"?"标签已添加。":"标签已保存 · Étiquettes enregistrées");
-  }
-  else if(act==="fnnotesave"){
-    /* free-form notes: save each textarea's text verbatim as that
-       marker's note — no format check, no required fields */
-    var baseN=vocabList(post).map(function(v){return {s:v.s,e:v.e,fr:v.fr,zh:v.zh,note:v.note||""};});
-    document.querySelectorAll('textarea[data-fnnote="'+post.id+'"]').forEach(function(ta){
-      var ns=+ta.dataset.s,ne=+ta.dataset.e;
-      for(var ni=0;ni<baseN.length;ni++){if(baseN[ni].s===ns&&baseN[ni].e===ne){baseN[ni].note=ta.value.trim();break;}}
-    });
-    SYS.edits["vocab:"+post.id]=JSON.stringify(baseN);saveSys();renderFeed();
-    toast("意思笔记已保存。");
-  }
-  else if(act==="fnaddnote"){
-    var sIn=$("fn-surface-"+post.id),nIn=$("fn-note-new-"+post.id);
-    var surfN=sIn?sIn.value.trim():"";
-    if(!surfN){toast("先写下要加标记的原文词或短语。");return;}
-    var rangeN=findPhraseRange(post,surfN);
-    if(!rangeN){toast("在原文里找不到这个短语：请按原文里出现的样子填写。");return;}
-    var baseA=vocabList(post).map(function(v){return {s:v.s,e:v.e,fr:v.fr,zh:v.zh,note:v.note||""};});
-    baseA.push({s:rangeN.s,e:rangeN.e,fr:surfN,zh:"",note:nIn?nIn.value.trim():""});
-    SYS.edits["vocab:"+post.id]=JSON.stringify(baseA);saveSys();renderFeed();
-    toast("生词标记已添加。");
-  }
-  else if(act==="fnadd"||act==="fnsaveedit"){
-    var surfEl=$("fn-surface-"+post.id),frEl=$("fn-fr-"+post.id),zhEl=$("fn-zh-"+post.id);
-    var surf=surfEl?surfEl.value.trim():"",frv=frEl?frEl.value.trim():"",zhv=zhEl?zhEl.value.trim():"";
-    if(!surf||!zhv){toast("请填写原文短语和中文意思。");return;}
-    var range=findPhraseRange(post,surf);
-    if(!range){toast("在原文里找不到这个短语：请按原文里出现的样子填写。");return;}
-    var list=vocabList(post).map(function(v){return {s:v.s,e:v.e,fr:v.fr,zh:v.zh};});
-    var entry={s:range.s,e:range.e,fr:frv||surf,zh:zhv};
-    if(act==="fnsaveedit"&&fnEditIdx>=0&&fnEditIdx<list.length){list[fnEditIdx]=entry;fnEditIdx=-1;toast("生词标记已修改并保存。");}
-    else {list.push(entry);toast("生词标记已添加并保存。");}
-    SYS.edits["vocab:"+post.id]=JSON.stringify(list);saveSys();renderFeed();
-  }
-  else if(act==="fncancel"){fnEditIdx=-1;renderFeed();}
-  else if(act==="fnedit"){
-    var vn=vocabNumbered(post),vi=+el.dataset.idx;
-    if(vn[vi]){
-      fnEditIdx=-1;
-      var base=vocabList(post);
-      /* editing works on the stored-order list: find the same entry there */
-      for(var bi=0;bi<base.length;bi++){if(base[bi].s===vn[vi].s&&base[bi].e===vn[vi].e&&base[bi].fr===vn[vi].fr){fnEditIdx=bi;break;}}
-      var sEl=$("fn-surface-"+post.id),fEl=$("fn-fr-"+post.id),zEl=$("fn-zh-"+post.id);
-      if(sEl)sEl.value=post.words.slice(vn[vi].s,vn[vi].e+1).join(" ");
-      if(fEl)fEl.value=vn[vi].fr;
-      if(zEl)zEl.value=vn[vi].zh;
-      toast("已载入这条标记：修改后点「保存修改」。");
-    }
-  }
-  else if(act==="fndel"){
-    var vn2=vocabNumbered(post),di=+el.dataset.idx;
-    if(vn2[di]){
-      var base2=vocabList(post).filter(function(v){return !(v.s===vn2[di].s&&v.e===vn2[di].e&&v.fr===vn2[di].fr&&v.zh===vn2[di].zh);});
-      SYS.edits["vocab:"+post.id]=JSON.stringify(base2);saveSys();fnEditIdx=-1;renderFeed();
-      toast("生词标记已删除。");
-    }
-  }
   else if(act==="dlposter")downloadPoster(post);
   else if(act==="dlfull")downloadFull(post);
   else if(act==="dlchunk"&&gi!==null)downloadChunk(post,gi);
@@ -2106,9 +1940,8 @@ function doCheckin(post){
 /* seed post: Jour 20, with the real clip */
 function seedFeed(){
   /* challenge 1: 30-second timed reading — Jour 20, real clip.
-     The post id carries the day (chal-1-day20) so browser-saved
-     admin edits (vocab / liaison / alignment) from the previous
-     exercise on this slot can never be applied to Jour 20's text. */
+     The post id carries the day (chal-1-day20) so nothing saved for
+     a previous exercise on this slot can be applied to Jour 20's text. */
   var post={id:"chal-1-day20",kicker:"挑战 · 30秒限时朗读",iconText:"30",dayLabel:"Jour 20",
     title:"30秒限时朗读",tags:["Jour 20","挑战"],postedLabel:"发布于 2026-10-30 · Posté le 30 octobre 2026",
     text:BUILTIN.text,dateLabel:"发布于 2026-10-30 · 示范录音是真实新闻片段（31.10 秒）",
@@ -2128,44 +1961,7 @@ function seedFeed(){
   });
   post.parsed=parseText(post.text);post.words=post.parsed.map(function(w){return w.text;});
   post.groups[post.groups.length-1].mark="fall";
-  /* 管理员在对齐检查表里保存过的逐词时间（近似值，本浏览器）：
-     载入后成为点词 / 点语块播放所用的时间。 */
-  try{
-    var alRaw=SYS.edits["align:"+post.id];
-    if(alRaw){var alArr=JSON.parse(alRaw);if(Array.isArray(alArr)&&alArr.length===post.wordTimes.length)post.wordTimes=alArr;}
-  }catch(e){}
   FEED.push(post);
-  /* 管理员在本浏览器新建的动态（静态发布：只存本浏览器，不是服务器发布） */
-  try{
-    var cpRaw=SYS.edits["customPosts"];
-    if(cpRaw){
-      var cpArr=JSON.parse(cpRaw);
-      if(Array.isArray(cpArr))cpArr.forEach(function(c){
-        if(!c||!c.text||!c.title)return;
-        var np={id:c.id||("custom-"+Date.now()),kicker:"挑战",title:c.title,tags:Array.isArray(c.tags)?c.tags:[],postedLabel:c.postedLabel||"",text:c.text,zhText:c.zhText||"",audioUrl:c.audioUrl||null,posterImg:c.posterImg||null,buffer:null,frames:null,pauses:[],duration:0,modelType:"file",checkedIn:false,dlBase:c.id||"custom",segLines:Array.isArray(c.segLines)?c.segLines:[]};
-        buildPostGroups(np);
-        if(np.segLines.length){
-          var ranges2=[],curW=0,ok2=true;
-          np.segLines.forEach(function(line){
-            var toks=splitWords(line); if(!toks.length){ok2=false;return;}
-            var found=-1;
-            for(var si2=curW;si2+toks.length<=np.words.length;si2++){var okk=true;for(var kk=0;kk<toks.length;kk++){if(normTok(np.words[si2+kk])!==normTok(toks[kk])){okk=false;break;}}if(okk){found=si2;break;}}
-            if(found<0){ok2=false;return;}
-            ranges2.push([found,found+toks.length-1]);curW=found+toks.length;
-          });
-          if(ok2&&ranges2.length===np.segLines.length){
-            np.groups=ranges2.map(function(rg,si3){
-              var g={w0:rg[0],w1:rg[1],start:null,end:null,endReason:si3===ranges2.length-1?"end":"comma",pause:null,bnds:{},cands:{},flagState:{},delta:null,points:[],mark:si3===ranges2.length-1?"fall":"rise",sect:{auto:false,lia:false,snd:false}};
-              var gw=np.words.slice(rg[0],rg[1]+1);
-              for(var k2=0;k2<gw.length-1;k2++){var cand2=liaisonCandidate(gw[k2],gw[k2+1]);if(cand2){g.cands[k2]=cand2;g.bnds[k2]=cand2.type;}}
-              return g;
-            });
-          }
-        }
-        FEED.push(np);
-      });
-    }
-  }catch(e){}
   renderFeed();
   var ctx=ensureCtx();
   if(ctx){
@@ -2207,306 +2003,20 @@ document.querySelectorAll(".nav-item").forEach(function(n){
   });
 });
 
-/* system editing: the left-nav toggle is the site owner's control.
-   ON  -> every chunk's annotated line becomes editable in place, with
-          Save / Reset-to-auto; the saved version is stored in this
-          browser and shown to participants with a system-edited mark.
-   OFF -> lines are read-only for everyone. */
-var sysToggle=$("sysToggle"),sysState=$("sysState");
-function applySysUI(){
-  if(sysToggle)sysToggle.setAttribute("aria-checked",SYS.on?"true":"false");
-  if(sysState)sysState.textContent=SYS.on?"当前：已打开 — 每个语块文字上的联读标记可编辑，保存后参与者看到修改版。":"当前：关闭 — 联读标记只读，参与者不能修改。";
-}
-if(sysToggle)sysToggle.addEventListener("click",function(){
-  SYS.on=!SYS.on;saveSys();applySysUI();
-  renderFeed();
-  toast(SYS.on?"系统编辑已打开：语块文字上的联读标记可修改并保存。":"系统编辑已关闭：联读标记恢复只读。");
-});
-applySysUI();
-
-/* help (?) buttons: hover shows the popover via CSS; tapping toggles it
-   (for touch screens). Liaison system editing: save / reset the marks
-   edited directly in the chunk text box. */
+/* help (?) buttons: hover shows the popover via CSS; tapping
+   toggles it (for touch screens). */
 document.addEventListener("click",function(ev){
   var hb=ev.target&&ev.target.closest?ev.target.closest("[data-help]"):null;
   if(hb){var wrap=hb.parentElement;if(wrap)wrap.classList.toggle("open");return;}
-  var b=ev.target&&ev.target.closest?ev.target.closest("[data-lia-act]"):null;if(!b)return;
-  var post=findPost(b.dataset.p);if(!post)return;
-  var gi=+b.dataset.g,key="lia:feed:"+post.id+":"+gi;
-  if(b.dataset.liaAct==="save"){
-    var ta=document.getElementById("liata-"+post.id+"-"+gi);if(!ta)return;
-    var val=ta.value.replace(/[<>]/g,"").replace(/\s+/g," ").trim();
-    if(val)SYS.edits[key]=val;else delete SYS.edits[key];
-    saveSys();refreshPostGroups(post);
-    toast("系统联读已保存：参与者将看到这一版，并带有「已由系统编辑」标记。");
-  } else if(b.dataset.liaAct==="reset"){
-    if(SYS.edits[key]){delete SYS.edits[key];saveSys();}
-    refreshPostGroups(post);
-    toast("已恢复自动联读标记。");
-  }
 });
 
-/* ---------------- 管理页面 · Page de gestion ----------------
-   独立地址：公开页面地址后加上 #/gestion 才会打开本页面，公开页面上
-   没有任何入口或编辑开关。密码不以明文保存：设置时生成随机盐，
-   只保存 盐 + 密码 的散列值（SHA-256，浏览器支持时）；登录时用同样
-   方式算一遍再比对。登录状态只记在本标签页的会话里，退出登录即清除。
-   重要：本站是静态发布，没有服务器。所谓「保存并发布」目前是把修改
-   存入本浏览器（与原来 SYS.edits 同一处），不是存入服务器，其他设备
-   的访客看不到。要实现真正的服务器发布，需要带服务器存储与服务器
-   验证的托管并重新部署——管理页面顶部的说明已如实写明这一点。 */
-var AUTH_KEY="fayuGestionAuthV1",SESS_KEY="fayuGestionSessionV1";
-function authStored(){try{var a=JSON.parse(localStorage.getItem(AUTH_KEY));if(a&&a.salt&&a.hash)return a;}catch(e){}return null;}
-function adminLoggedIn(){try{return sessionStorage.getItem(SESS_KEY)==="1"&&!!authStored();}catch(e){return false;}}
-function hashPw(pw,salt){
-  var data=salt+":"+pw;
-  if(window.crypto&&crypto.subtle&&crypto.subtle.digest){
-    return crypto.subtle.digest("SHA-256",new TextEncoder().encode(data)).then(function(buf){
-      return Array.prototype.map.call(new Uint8Array(buf),function(b){return ("0"+b.toString(16)).slice(-2);}).join("");
-    });
-  }
-  /* 不支持散列接口的旧浏览器：退回弱散列，仅作本机门槛，不能当作安全保证 */
-  var h1=0x811c9dc5;for(var i=0;i<data.length;i++){h1^=data.charCodeAt(i);h1=Math.imul(h1,0x01000193)>>>0;}
-  return Promise.resolve("faible-"+h1.toString(16));
-}
-function makeSalt(){
-  try{var a=new Uint8Array(12);crypto.getRandomValues(a);return Array.prototype.map.call(a,function(b){return ("0"+b.toString(16)).slice(-2);}).join("");}catch(e){}
-  return String(Date.now())+"-"+Math.random().toString(36).slice(2);
-}
-/* ---------------- 管理：对齐检查表（Jour 20） ----------------
-   逐段列出每个词的近似起止时间。基础数据：本片段录音的逐词对齐
-   （原始节目 258.7 秒起算的偏移已扣除），已按文字稿校正。听写
-   容易出错的词标为「不确定」：Aleksandar（词 39，听写拼作
-   Alexandar）、c'est（词 43，听写拆成两个词元后合并）、croisés
-   （词 52，听写成单数 croisé）。管理员可逐段试听、逐词试听、
-   修改起止后保存；保存的版本存本浏览器（SYS.edits，键
-   "align:<post id>"），并立刻成为参与者点词 / 点语块播放所用的
-   时间。 */
-var ALIGN_UNCERTAIN={38:1,42:1,51:1};
-function effWordTimes(post){
-  var raw=SYS.edits["align:"+post.id];
-  if(raw){
-    try{var a=JSON.parse(raw);if(Array.isArray(a)&&post.wordTimes&&a.length===post.wordTimes.length)return a;}catch(e){}
-  }
-  return post.wordTimes||[];
-}
-function adminAlignHTML(post){
-  if(!post.wordTimes||!post.words||!post.groups)return "";
-  var times=effWordTimes(post);
-  var h='<div class="admin-post align-box"><h4>对齐检查 · Vérification de l\u2019alignement（Jour 20）</h4>';
-  h+='<p class="align-note">这里的时间全是<b>近似值</b> · Temps <b>approximatifs</b>：来自本片段录音的逐词对齐（已扣除原节目 258.7 秒的起点偏移），并按文字稿校正过；语块边界已对照逐词时间和句子 / 句法停顿检查过。标为「不确定 · Incertain」的词是自动听写容易出错的地方（Aleksandar、c\u2019est、croisés），请重点试听。逐段检查：先点「试听语块」，再逐词试听，边界不对就直接改起止数字，最后点「保存对齐」。保存后，参与者点词、选短语、点波形用的就是这一版时间。</p>';
-  h+='<div class="admin-actions"><button type="button" class="btn primary" data-align-act="save" data-p="'+post.id+'">保存对齐 · Enregistrer l\u2019alignement</button><button type="button" class="btn" data-align-act="reset" data-p="'+post.id+'">恢复原始近似值 · Restaurer les valeurs d\u2019origine</button></div><p class="admin-msg" id="alignMsg" role="status"></p>';
-  post.groups.forEach(function(g,gi){
-    h+='<div class="align-seg"><div class="align-seg-head"><b>语块 '+(gi+1)+' · Segment '+(gi+1)+'</b><button type="button" class="mini" data-align-act="seg" data-p="'+post.id+'" data-g="'+gi+'">试听语块 · Écouter le segment</button></div>';
-    for(var wi=g.w0;wi<=g.w1;wi++){
-      var t=times[wi]||[0,0];
-      h+='<div class="align-row"><span class="align-w">'+(wi+1)+'. '+escH(post.words[wi])+'</span>'
-        +'<label>起 · Début <input type="number" step="0.01" min="0" class="align-in adm-align-start" data-wi="'+wi+'" value="'+Number(t[0]).toFixed(2)+'"></label>'
-        +'<label>止 · Fin <input type="number" step="0.01" min="0" class="align-in adm-align-end" data-wi="'+wi+'" value="'+Number(t[1]).toFixed(2)+'"></label>'
-        +(ALIGN_UNCERTAIN[wi]?'<span class="align-flag">不确定 · Incertain</span>':"")
-        +'<button type="button" class="mini" data-align-act="word" data-p="'+post.id+'" data-wi="'+wi+'">试听 · Écouter</button></div>';
-    }
-    h+="</div>";
-  });
-  h+='<div class="admin-actions"><button type="button" class="btn primary" data-align-act="save" data-p="'+post.id+'">保存对齐 · Enregistrer l\u2019alignement</button></div>';
-  h+="</div>";
-  return h;
-}
-function adminPostsHTML(){
-  var h="";
-  FEED.forEach(function(post){
-    h+='<div class="admin-post"><h4>'+escH(effTitle(post))+"</h4>";
-    h+='<div class="admin-field"><label>标题 · Titre</label><input type="text" class="adm-title" data-p="'+post.id+'" value="'+escA(effTitle(post))+'"></div>';
-    h+='<div class="admin-field"><label>发布日期 · Date de publication</label><input type="text" class="adm-posted" data-p="'+post.id+'" value="'+escA(effPosted(post))+'"></div>';
-    h+='<div class="admin-field"><label>标签（每行一个，自由填写）· Étiquettes, une par ligne</label><textarea class="adm-tags" data-p="'+post.id+'" rows="3">'+escH(postTags(post).join("\n"))+"</textarea></div>";
-    h+='<div class="admin-field"><label>原文 · Texte</label><textarea class="adm-text" data-p="'+post.id+'" rows="4">'+escH(effText(post))+"</textarea></div>";
-    post.groups.forEach(function(g,gi){
-      h+='<div class="admin-field"><label>语块 '+(gi+1)+' 文字与联读标记 · Segment '+(gi+1)+' et liaisons（‿ 必连 · (‿) 可连 · ✕ 禁连）</label><textarea class="adm-lia" data-p="'+post.id+'" data-g="'+gi+'" rows="2">'+escH(liaPlainText(post,gi))+"</textarea></div>";
-    });
-    if(post.vocab){
-      vocabNumbered(post).forEach(function(v){
-        var note=v.note?v.note:(v.fr+" — "+v.zh);
-        h+='<div class="admin-field"><label>生词意思笔记 '+v.num+" · "+escH(v.fr)+'</label><textarea class="adm-fnnote" data-p="'+post.id+'" data-s="'+v.s+'" data-e="'+v.e+'" rows="2">'+escH(note)+"</textarea></div>";
-      });
-    }
-    h+="</div>";
-  });
-  return h;
-}
-function renderAdmin(){
-  var has=!!authStored(),logged=adminLoggedIn();
-  var su=$("adminSetup"),li=$("adminLogin"),ed=$("adminEditor");
-  if(su)su.hidden=has||logged;
-  if(li)li.hidden=!has||logged;
-  if(ed)ed.hidden=!logged;
-  if(logged){var box=$("adminPosts");if(box){box.innerHTML=adminPostsHTML();var ap20=findPost("chal-1-day20");if(ap20)box.innerHTML+=adminAlignHTML(ap20);}}
-  var npP=$("npPosted");if(npP&&logged){var d=new Date();var mo=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];var iso=d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);npP.value="发布于 "+iso+" · Posté le "+d.getDate()+" "+mo[d.getMonth()]+" "+d.getFullYear();}
-}
-function publishAdmin(){
-  FEED.forEach(function(post){
-    function val(cls){var el=document.querySelector("."+cls+'[data-p="'+post.id+'"]');return el?el.value.trim():"";}
-    var t=val("adm-title");if(t&&t!==post.title)SYS.edits["title:"+post.id]=t;else if(t===post.title)delete SYS.edits["title:"+post.id];
-    var pd=val("adm-posted");if(pd!==(post.postedLabel||""))SYS.edits["posted:"+post.id]=pd;else delete SYS.edits["posted:"+post.id];
-    var tx=val("adm-text");if(tx&&tx!==post.text)SYS.edits["text:"+post.id]=tx;else if(tx===post.text)delete SYS.edits["text:"+post.id];
-    var tgEl=document.querySelector('.adm-tags[data-p="'+post.id+'"]');
-    if(tgEl){var lines=tgEl.value.split("\n").map(function(s){return s.trim();}).filter(Boolean);SYS.edits["tags:"+post.id]=JSON.stringify(lines);}
-    document.querySelectorAll('.adm-lia[data-p="'+post.id+'"]').forEach(function(ta){
-      var v=ta.value.replace(/[<>]/g,"").replace(/\s+/g," ").trim();
-      if(v)SYS.edits["lia:feed:"+post.id+":"+ta.dataset.g]=v;
-    });
-    if(post.vocab){
-      var base=vocabList(post).map(function(v){return {s:v.s,e:v.e,fr:v.fr,zh:v.zh,note:v.note||""};});
-      document.querySelectorAll('.adm-fnnote[data-p="'+post.id+'"]').forEach(function(ta){
-        var ns=+ta.dataset.s,ne=+ta.dataset.e;
-        for(var i=0;i<base.length;i++)if(base[i].s===ns&&base[i].e===ne){base[i].note=ta.value.trim();break;}
-      });
-      SYS.edits["vocab:"+post.id]=JSON.stringify(base);
-    }
-  });
-  saveSys();renderFeed();renderAdmin();
-  var m=$("adminMsg");if(m)m.textContent="已保存到本浏览器 · Enregistré dans ce navigateur（静态发布下不是服务器发布，其他设备看不到）";
-  toast("已保存 · Enregistré");
-}
-
-function readFileAsDataURL(f){
-  return new Promise(function(res){if(!f){res("");return;}var r=new FileReader();r.onload=function(){res(String(r.result||""));};r.onerror=function(){res("");};r.readAsDataURL(f);});
-}
-function buildCustomLivePost(c){
-  var np={id:c.id,kicker:"挑战",title:c.title,tags:c.tags||[],postedLabel:c.postedLabel||"",text:c.text,zhText:c.zhText||"",audioUrl:c.audioUrl||null,posterImg:c.posterImg||null,buffer:null,frames:null,pauses:[],duration:0,modelType:"file",checkedIn:false,dlBase:c.id,segLines:c.segLines||[]};
-  buildPostGroups(np);
-  if(np.segLines&&np.segLines.length){
-    var ranges=[],curW=0,ok=true;
-    np.segLines.forEach(function(line){
-      var toks=splitWords(line);if(!toks.length){ok=false;return;}
-      var found=-1;
-      for(var si=curW;si+toks.length<=np.words.length;si++){var okk=true;for(var kk=0;kk<toks.length;kk++){if(normTok(np.words[si+kk])!==normTok(toks[kk])){okk=false;break;}}if(okk){found=si;break;}}
-      if(found<0){ok=false;return;}
-      ranges.push([found,found+toks.length-1]);curW=found+toks.length;
-    });
-    if(ok&&ranges.length===np.segLines.length){
-      np.groups=ranges.map(function(rg,si3){
-        var g={w0:rg[0],w1:rg[1],start:null,end:null,endReason:si3===ranges.length-1?"end":"comma",pause:null,bnds:{},cands:{},flagState:{},delta:null,points:[],mark:si3===ranges.length-1?"fall":"rise",sect:{auto:false,lia:false,snd:false}};
-        var gw=np.words.slice(rg[0],rg[1]+1);
-        for(var k2=0;k2<gw.length-1;k2++){var cand2=liaisonCandidate(gw[k2],gw[k2+1]);if(cand2){g.cands[k2]=cand2;g.bnds[k2]=cand2.type;}}
-        return g;
-      });
-    }
-  }
-  return np;
-}
-function createNewPost(){
-  var msg=$("npMsg");
-  function val(id){var e=$(id);return e?e.value.trim():"";}
-  var title=val("npTitle"),fr=val("npFr");
-  if(!title){if(msg)msg.textContent="先填写标题 · Écrivez d'abord le titre";return;}
-  if(!fr){if(msg)msg.textContent="先填写法语原文 · Écrivez d'abord le texte français";return;}
-  var tags=val("npTags").split(/[\n,，、]/).map(function(s){return s.trim();}).filter(Boolean);
-  var posted=val("npPosted");
-  var segLines=val("npSegs").split("\n").map(function(s){return s.trim();}).filter(Boolean);
-  var posterF=$("npPosterFile"),audioF=$("npAudioFile");
-  var pf=posterF&&posterF.files?posterF.files[0]:null;
-  var af=audioF&&audioF.files?audioF.files[0]:null;
-  Promise.all([readFileAsDataURL(pf),readFileAsDataURL(af)]).then(function(ds){
-    var c={id:"custom-"+Date.now(),title:title,tags:tags,postedLabel:posted,text:fr,zhText:val("npZh"),audioUrl:ds[1]||val("npAudioLink")||"",posterImg:ds[0]||val("npPosterLink")||"",segLines:segLines};
-    try{
-      var arr=[];var raw=SYS.edits["customPosts"];if(raw){var parsedArr=JSON.parse(raw);if(Array.isArray(parsedArr))arr=parsedArr;}
-      arr.unshift(c);SYS.edits["customPosts"]=JSON.stringify(arr);saveSys();
-    }catch(e){if(msg)msg.textContent="本浏览器存储空间不足，新动态只在本次打开期间显示 · Stockage local insuffisant";}
-    FEED.unshift(buildCustomLivePost(c));
-    renderFeed();renderAdmin();
-    var m2=$("npMsg");if(m2)m2.textContent="新动态已创建，已出现在动态里（只保存在本浏览器，不是服务器发布）· Publication créée, visible dans ce navigateur seulement";
-    toast("新动态已创建 · Publication créée");
-    gotoPublic();
-  });
-}
-function isAdminRoute(){return false;} /* public-only build: admin route disabled */
-function applyRoute(){
-  var adm=isAdminRoute();
-  var av=$("adminView");if(av)av.hidden=!adm;
-  var app=document.querySelector(".app-card");if(app)app.style.display=adm?"none":"";
-  SYS.on=adm&&adminLoggedIn();
-  if(adm)renderAdmin();
-  renderFeed();
-}
-window.addEventListener("hashchange",applyRoute);
-var setupBtn=$("setupBtn");
-if(setupBtn)setupBtn.addEventListener("click",function(){
-  var p1=$("setupPw1").value,p2=$("setupPw2").value,msg=$("setupMsg");
-  if(p1.length<6){msg.textContent="密码至少 6 个字符 · Six caractères au minimum";return;}
-  if(p1!==p2){msg.textContent="两次输入不一致 · Les deux saisies diffèrent";return;}
-  var salt=makeSalt();
-  hashPw(p1,salt).then(function(h){
-    try{localStorage.setItem(AUTH_KEY,JSON.stringify({salt:salt,hash:h}));}catch(e){}
-    try{sessionStorage.setItem(SESS_KEY,"1");}catch(e){}
-    SYS.on=true;renderAdmin();renderFeed();
-    toast("密码已设置，已登录 · Mot de passe défini, connexion faite");
-  });
-});
-var loginBtn=$("loginBtn");
-if(loginBtn)loginBtn.addEventListener("click",function(){
-  var a=authStored(),msg=$("loginMsg");if(!a)return;
-  hashPw($("loginPw").value,a.salt).then(function(h){
-    if(h===a.hash){try{sessionStorage.setItem(SESS_KEY,"1");}catch(e){}SYS.on=true;renderAdmin();renderFeed();toast("登录成功 · Connexion réussie");}
-    else msg.textContent="密码不对 · Mot de passe incorrect";
-  });
-});
-function gotoPublic(){location.hash="accueil";applyRoute();window.scrollTo(0,0);}
-var tp1=$("toPublicBtn1");if(tp1)tp1.addEventListener("click",gotoPublic);
-var adminViewEl=$("adminView");
-if(adminViewEl)adminViewEl.addEventListener("click",function(ev){
-  var b=ev.target&&ev.target.closest?ev.target.closest("[data-admin-act]"):null;if(!b)return;
-  var act=b.dataset.adminAct;
-  if(act==="newpost")createNewPost();
-  else if(act==="publish")publishAdmin();
-  else if(act==="topublic")gotoPublic();
-  else if(act==="logout"){try{sessionStorage.removeItem(SESS_KEY);}catch(e){}SYS.on=false;saveSys();renderAdmin();renderFeed();toast("已退出登录 · Déconnexion faite");}
-});
-/* 对齐检查表：试听语块 / 试听单词 / 保存 / 恢复 */
-if(adminViewEl)adminViewEl.addEventListener("click",function(ev){
-  var b=ev.target&&ev.target.closest?ev.target.closest("[data-align-act]"):null;if(!b)return;
-  var post=findPost(b.dataset.p);if(!post||!post.wordTimes)return;
-  var act=b.dataset.alignAct;
-  if(act==="word"){playWordRange(post,+b.dataset.wi,+b.dataset.wi);}
-  else if(act==="seg"){playPostSlice(post,+b.dataset.g);}
-  else if(act==="reset"){
-    delete SYS.edits["align:"+post.id];
-    if(post.id==="chal-1-day20")post.wordTimes=BUILTIN.words;
-    saveSys();renderAdmin();
-    toast("已恢复原始近似值 · Valeurs d\u2019origine restaurées");
-  }
-  else if(act==="save"){
-    var base=effWordTimes(post).map(function(t){return [Number(t[0]),Number(t[1])];});
-    var bad=0;
-    document.querySelectorAll(".adm-align-start").forEach(function(inp){
-      var wi=+inp.dataset.wi,v=parseFloat(inp.value);
-      if(isNaN(v)||v<0){bad++;return;}
-      base[wi][0]=v;
-    });
-    document.querySelectorAll(".adm-align-end").forEach(function(inp){
-      var wi=+inp.dataset.wi,v=parseFloat(inp.value);
-      if(isNaN(v)||v<=base[wi][0]){bad++;return;}
-      base[wi][1]=v;
-    });
-    var msg=$("alignMsg");
-    if(bad){if(msg)msg.textContent="有 "+bad+" 处时间不对（止要大于起）：请改好再保存 · "+bad+" valeur(s) à corriger";return;}
-    SYS.edits["align:"+post.id]=JSON.stringify(base);
-    post.wordTimes=base;
-    /* 语块起止跟着首尾词走，波形与播放范围同步更新 */
-    post.groups.forEach(function(g){
-      if(base[g.w0])g.start=base[g.w0][0];
-      if(base[g.w1])g.end=base[g.w1][1];
-    });
-    saveSys();renderFeed();renderAdmin();
-    var m2=$("alignMsg");if(m2)m2.textContent="对齐已保存（近似值）· Alignement enregistré (valeurs approximatives)";
-    toast("对齐已保存 · Alignement enregistré");
-  }
-});
 
 /* init — all shared helpers (BND_BTN, DET_RE, liaison helpers) are defined
    by now, so the seeded feed post can render. */
 seedFeed();
-applyRoute();
+renderFeed();
 })();
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f63af01cb6a84cbab483bdb94cd96497"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
